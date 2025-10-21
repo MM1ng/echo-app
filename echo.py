@@ -1,7 +1,8 @@
 import sys
 def echo():
-    shout = "-s" in sys.argv  # 检测是否传入 -s 参数
-    message = input("Please enter a message: ")  # 统一的输入提示
-    print(message.upper() if shout else message)  # 大写输出
+    shout = "-s" in sys.argv
+    message = input("Please enter a message: ")
+    print(message.upper() if shout else message)
+    print(f"Message length: {len(message)}")  # 新增：显示输入长度
 if __name__ == "__main__":
     echo()
